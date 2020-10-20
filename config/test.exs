@@ -1,8 +1,8 @@
 use Mix.Config
 
-config :ecto_poly, ecto_repos: [EctoPoly.TestRepo]
+config :poly_amory, ecto_repos: [PolyAmory.TestRepo]
 
-config :ecto_poly, EctoPoly.TestRepo,
+config :poly_amory, PolyAmory.TestRepo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
   password: "postgres",

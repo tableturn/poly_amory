@@ -1,3 +1,3 @@
-defmodule EctoPoly.TestEmailChannel do
+defmodule PolyAmory.TestEmailChannel do
   defstruct [:email]
 end

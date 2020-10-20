@@ -1,9 +1,9 @@
-defmodule EctoPoly.TestSchema do
+defmodule PolyAmory.TestSchema do
   use Ecto.Schema
   import Ecto.Changeset
 
   schema "test_schema" do
-    field :channel, EctoPoly.TestChannelData
+    field :channel, PolyAmory.TestChannelData
 
     timestamps()
   end

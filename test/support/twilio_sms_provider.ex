@@ -1,4 +1,4 @@
-defmodule EctoPoly.TwilioSmsProvider do
+defmodule PolyAmory.TwilioSmsProvider do
   use Ecto.Schema
 
   embedded_schema do

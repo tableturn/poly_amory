@@ -1,3 +1,3 @@
-defmodule EctoPoly.TestSmsProvider do
+defmodule PolyAmory.TestSmsProvider do
   defstruct []
 end

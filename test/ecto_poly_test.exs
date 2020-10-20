@@ -1,10 +1,10 @@
-defmodule EctoPolyTest do
+defmodule PolyAmoryTest do
   import Ecto.Query
 
-  use EctoPoly.TestCase
+  use PolyAmory.TestCase
 
   alias Ecto.Changeset
-  alias EctoPoly.{TestRepo, TestSchema, TestEmailChannel, TestSmsChannel, TwilioSmsProvider}
+  alias PolyAmory.{TestRepo, TestSchema, TestEmailChannel, TestSmsChannel, TwilioSmsProvider}
 
   describe "with simple struct" do
     test "when saving" do
@@ -173,7 +173,7 @@ defmodule EctoPolyTest do
       assert_raise ArgumentError, "invalid type: unknown", fn ->
         %TestSchema{}
         |> Changeset.cast(params, [])
-        |> EctoPoly.cast(:channel, :unknown)
+        |> PolyAmory.cast(:channel, :unknown)
       end
     end
 
@@ -189,7 +189,7 @@ defmodule EctoPolyTest do
       result =
         %TestSchema{}
         |> Changeset.cast(params, [])
-        |> EctoPoly.cast(:channel, :sms)
+        |> PolyAmory.cast(:channel, :sms)
         |> TestRepo.insert!()
 
       assert match?(%TestSchema{channel: %TestSmsChannel{number: ^number}}, result)
@@ -207,7 +207,7 @@ defmodule EctoPolyTest do
       result =
         %TestSchema{}
         |> Changeset.cast(params, [])
-        |> EctoPoly.cast(:channel, TestSmsChannel)
+        |> PolyAmory.cast(:channel, TestSmsChannel)
         |> TestRepo.insert!()
 
       assert match?(%TestSchema{channel: %TestSmsChannel{number: ^number}}, result)
@@ -225,7 +225,7 @@ defmodule EctoPolyTest do
       result =
         %TestSchema{}
         |> Changeset.cast(params, [])
-        |> EctoPoly.cast(:channel, TestSmsChannel)
+        |> PolyAmory.cast(:channel, TestSmsChannel)
         |> TestRepo.insert()
 
       assert match?(

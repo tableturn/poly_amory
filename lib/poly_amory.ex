@@ -1,4 +1,4 @@
-defmodule EctoPoly do
+defmodule PolyAmory do
   @moduledoc """
   Creates a polymorphic embedded type
   """
@@ -13,8 +13,8 @@ defmodule EctoPoly do
 
   # Example
 
-      defmodule EctoPoly.TestChannelData do
-        use EctoPoly, types: [
+      defmodule PolyAmory.TestChannelData do
+        use PolyAmory, types: [
           sms: TestSmsChannel,
           email: TestEmailChannel,
         ]
@@ -50,9 +50,9 @@ defmodule EctoPoly do
 
       def type, do: :map
 
-      EctoPoly.__casters__(unquote(types))
-      EctoPoly.__dumpers__(unquote(types))
-      EctoPoly.__loaders__(unquote(types))
+      PolyAmory.__casters__(unquote(types))
+      PolyAmory.__dumpers__(unquote(types))
+      PolyAmory.__loaders__(unquote(types))
 
       def __types__, do: unquote(types)
 
@@ -137,7 +137,7 @@ defmodule EctoPoly do
       defp load(unquote(name), fields) do
         result =
           unquote(value_type)
-          |> Ecto.Schema.Loader.unsafe_load(fields |> Map.new(), &EctoPoly.load_value/2)
+          |> Ecto.Schema.Loader.unsafe_load(fields |> Map.new(), &PolyAmory.load_value/2)
 
         {:ok, result}
       end
@@ -178,7 +178,7 @@ defmodule EctoPoly do
 
         embedded_type = unquote(embedded_structure)
 
-        with {:ok, result} <- Ecto.Type.dump(embedded_type, value, &EctoPoly.dump_value/2),
+        with {:ok, result} <- Ecto.Type.dump(embedded_type, value, &PolyAmory.dump_value/2),
              result = result |> Map.put(@type_field, Atom.to_string(unquote(name))) do
           {:ok, result}
         end
@@ -376,7 +376,7 @@ defmodule EctoPoly do
             when length(args_or_arity) == 2 ->
               raise ArgumentError, """
               the module #{inspect(module)} does not define a changeset/2
-              function, which is used by EctoPoly.cast/3. You need to
+              function, which is used by PolyAmory.cast/3. You need to
               implement the #{module}.changeset/2 function.
               """
 

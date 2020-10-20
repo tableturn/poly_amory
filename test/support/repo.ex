@@ -1,3 +1,3 @@
-defmodule EctoPoly.TestRepo do
-  use Ecto.Repo, otp_app: :ecto_poly, adapter: Ecto.Adapters.Postgres
+defmodule PolyAmory.TestRepo do
+  use Ecto.Repo, otp_app: :poly_amory, adapter: Ecto.Adapters.Postgres
 end

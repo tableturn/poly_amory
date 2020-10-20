@@ -1,3 +1,3 @@
-defmodule EctoPoly.SmsProvider do
-  use EctoPoly, types: [twilio: EctoPoly.TwilioSmsProvider, test: EctoPoly.TestSmsProvider]
+defmodule PolyAmory.SmsProvider do
+  use PolyAmory, types: [twilio: PolyAmory.TwilioSmsProvider, test: PolyAmory.TestSmsProvider]
 end

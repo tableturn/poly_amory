@@ -1,3 +1,3 @@
-defmodule EctoPoly.TestChannelData do
-  use EctoPoly, types: [sms: EctoPoly.TestSmsChannel, email: EctoPoly.TestEmailChannel]
+defmodule PolyAmory.TestChannelData do
+  use PolyAmory, types: [sms: PolyAmory.TestSmsChannel, email: PolyAmory.TestEmailChannel]
 end

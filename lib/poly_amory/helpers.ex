@@ -1,4 +1,4 @@
-defmodule EctoPoly.Helpers do
+defmodule PolyAmory.Helpers do
   @moduledoc false
 
   @spec dependency_vsn_match?(atom(), binary()) :: boolean()

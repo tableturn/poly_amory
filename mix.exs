@@ -1,10 +1,10 @@
-defmodule EctoPoly.Mixfile do
+defmodule PolyAmory.Mixfile do
   use Mix.Project
 
   @version "1.0.6"
   @name "Ecto Poly"
   @description "Polymorphic embeds for Ecto. Forked from ecto_poly to make it compatible with Ecto 3.5+."
-  @github "https://github.com/tableturn/ecto_poly"
+  @github "https://github.com/tableturn/poly_amory"
 
   def project(),
     do: [
@@ -12,7 +12,7 @@ defmodule EctoPoly.Mixfile do
       description: @description,
       version: @version,
       elixir: "~> 1.5",
-      app: :ecto_poly_armory,
+      app: :poly_amory,
       start_permanent: Mix.env() == :prod,
       elixirc_paths: elixirc_paths(Mix.env()),
       package: package(),

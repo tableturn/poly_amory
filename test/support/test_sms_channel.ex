@@ -1,11 +1,11 @@
-defmodule EctoPoly.TestSmsChannel do
+defmodule PolyAmory.TestSmsChannel do
   use Ecto.Schema
 
   alias Ecto.Changeset
 
   embedded_schema do
     field :number, :string
-    field :provider, EctoPoly.SmsProvider
+    field :provider, PolyAmory.SmsProvider
   end
 
   def changeset(struct, params) do

@@ -1,4 +1,4 @@
-defmodule EctoPoly.TestRepo.Migrations.AddTestSchema do
+defmodule PolyAmory.TestRepo.Migrations.AddTestSchema do
   use Ecto.Migration
 
   def change do
