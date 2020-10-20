@@ -1,7 +1,7 @@
 defmodule PolyAmory.Mixfile do
   use Mix.Project
 
-  @version "1.0.6"
+  @version "1.0.7"
   @name "Ecto Poly"
   @description "Polymorphic embeds for Ecto. Forked from ecto_poly to make it compatible with Ecto 3.5+."
   @github "https://github.com/tableturn/poly_amory"
