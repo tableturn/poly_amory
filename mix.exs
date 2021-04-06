@@ -27,10 +27,10 @@ defmodule PolyAmory.Mixfile do
   defp deps(),
     do: [
       {:ecto, ">= 2.0.0"},
+      {:jason, "~> 1.0"},
       {:postgrex, "~> 0.11", only: [:dev, :test]},
       {:ecto_sql, "~> 3.5", only: [:dev, :test]},
-      {:ex_doc, "~> 0.19", only: :dev, runtime: false},
-      {:inch_ex, ">= 0.0.0", only: :docs}
+      {:ex_doc, "~> 0.19", only: :dev, runtime: false}
     ]
 
   defp package(),
