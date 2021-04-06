@@ -162,7 +162,7 @@ defmodule PolyAmory do
 
   defp dumper(true, name, value_type) do
     embedded_structure =
-      if __MODULE__.Helpers.dependency_vsn_match?(:ecto, "~> 3.5.0") do
+      if __MODULE__.Helpers.dependency_vsn_match?(:ecto, "~> 3.5") do
         quote(do: {:parameterized, Ecto.Embedded, var!(struct)})
       else
         quote(do: {:embed, var!(struct)})
@@ -370,7 +370,7 @@ defmodule PolyAmory do
         module.changeset(struct, param)
       rescue
         e in UndefinedFunctionError ->
-          case System.stacktrace() do
+          case __STACKTRACE__ do
             [{^module, :changeset, args_or_arity, _} | _]
             when args_or_arity == 2
             when length(args_or_arity) == 2 ->
